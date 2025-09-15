@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUNCH LAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bebas Neue', cursive;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 6em;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .menu-button {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff4d00;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .menu-button:hover {
+      background-color: #cc3b00;
+      transform: scale(1.05);
+    }
+
+    /* Estilos para el formulario */
+    form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    form label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    form input,
+    form textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+      margin-top: 5px;
+    }
+
+    form button {
+      padding: 12px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff6600;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #cc5200;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+
+      .menu-button {
+        font-size: 1.2em;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>CRUNCH LAB</h1>
+    <p>Explosión de sabor en cada mordida: alitas y boneless como nunca antes</p>
+    <div class="button-container">
+      <a href="menu1.html" class="menu-button">MENÚ 1</a>
+      <a href="menu2.html" class="menu-button">MENÚ 2</a>
+    </div>
+
+    <!-- FORMULARIO -->
+    <form action="https://formspree.io/f/xdkdrkjk" method="POST">
+      <label>
+        Tu correo electrónico:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Tu mensaje:
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <!-- Puedes agregar más campos aquí -->
+      <button type="submit">Enviar</button>
+    </form>
+
+  </div>
+</body>
+</html>
